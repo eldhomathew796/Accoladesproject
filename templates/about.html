@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+
+
+
+
+
+
+
+{% block content %}
+
+<style>
+    .img-fluid {
+        max-width:100%;
+        
+    }
+    </style>
+
+<h1 style="color:blue; text-align:center; font-size:50px;'">About</h1>
+{% for i in about %}
+<div class="container-fluid col-6 p-4">
+    {% comment %} <h4>{{i.title }}</h4> {% endcomment %}
+    <p>{{i.content}}</p>
+    {% comment %} <img class="my_image" src="{{ i.image.url }}"> {% endcomment %}
+
+</div>
+<div class="container-fluid">
+<div class="col-12 p-4">
+    <div class="p-3 bg-white p-2 text-dark bg-opacity-10">
+        <img src="{{i.image.url}}" alt="NO-img" height="auto"   class=" img-fluid border border-light rounded-lg">
+    </div>
+</div>
+</div>
+
+{% endfor %}
+
+
+
+
+{% endblock %}

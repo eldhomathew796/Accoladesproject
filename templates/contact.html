@@ -1,0 +1,195 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+
+{% block content %}
+<div class="container-fluid px-5 d-none d-lg-block">
+    <div class="row gx-5">
+        <div class="col-lg-4 text-center py-3">
+            <div class="d-inline-flex align-items-center">
+                <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                <div class="text-start">
+                    <h6 class="text-uppercase fw-bold">Our Office</h6>
+                    <span>Corporate Office No.32/3071 – B | First Floor | Anjiparambil Building | Ponnurunni | NH Bypass | Vyttila | Kochi – 682 019</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center border-start border-end py-3">
+            <div class="d-inline-flex align-items-center">
+                <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                <div class="text-start">
+                    <h6 class="text-uppercase fw-bold">Email Us</h6>
+                    <span>info@accolades.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center py-3">
+            <div class="d-inline-flex align-items-center">
+                <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                <div class="text-start">
+                    <h6 class="text-uppercase fw-bold">Call Us</h6>
+                    <span>0484-2235985,6258935148</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-6 px-5">
+    <div class="row gx-5">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="mb-4">
+                <h1 class="display-5 text-uppercase mb-4">Request A <span class="text-primary">Call Back</span></h1>
+            </div>
+            <p class="mb-5">We tenderly place our whole soul to comfortably accommodate our clients in their advertising needs. As a top-notch digital marketing company in kochi, we meticulously maintain unique business acumen. We carefully look at your iconic brand, apprehend your core audience and adequately prepare a tailor-made plan to subtly shift the trajectory of your brand towards more economic prosperity.</p>
+            <a class="btn btn-primary py-3 px-5" href="">Get A Quote</a>
+        </div>
+        {% comment %} <div class="col-lg-8">
+            <div class="bg-light text-center p-5">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                        </div> {% endcomment %}
+                        
+
+
+
+                        {% comment %} <div class="col-12 col-sm-6">
+                            <div class="date" id="date" data-target-input="nearest">
+                                <input type="text"
+                                    class="form-control border-0 datetimepicker-input"
+                                    placeholder="Call Back Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="time" id="time" data-target-input="nearest">
+                                <input type="time" name="time" 
+                                    class="form-control border-0 datetimepicker-input"
+                                    placeholder="Call Back Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                            </div>
+                        </div> {% endcomment %}
+                        {% comment %} <div class="col-12">
+                           <input type="text" name="message" <textarea class="form-control border-0" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+ <div class="col-lg-8">
+    <div class="bg-light text-center p-5">
+        <form action="" method="POST" class="form p-5" enctype="multipart/form-data"> 
+            {% csrf_token %}
+             <div class="row ">
+                <div class="col-md-6">
+                    
+                    
+                    
+
+                    <input type="text" class="form-control border-0" name="name" placeholder="Your Name" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="email" class="form-control border-0" name="email" placeholder="Your Email" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <input type="number" class="form-control border-0" name="number" placeholder="Your Mobile Number" style="height: 55px;">
+              </div>
+                
+                <div class="col-12">
+                    <textarea class="form-control border-0" rows="5" name="message" placeholder="Message"></textarea>
+                </div>
+
+                
+
+           
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+               
+                 <div class="col-12">
+
+                   
+                 <button onclick="javascript:alert('Thank you,We will contact you shortly');" class="btn btn-primary w-100 py-3"  type="submit">Submit Request</button> 
+                    
+                </div>
+                
+
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div> 
+
+
+
+
+
+
+
+
+
+{% comment %} <div style="margin-bottom: 160px;">
+    <center><h1 class="" style="margin-top: 10px;">Add Tutor</h1></center>
+  </div>
+  
+  <div class="container" style="border-radius: 10px; width:100%; margin-right:240px ;margin-top: 20px;" >
+   <form action="" method="post" class="form pt-5 pb-5" style="width: 30%; margin-left:32%" enctype="multipart/form-data">
+       {% csrf_token %}
+  
+       <input type="text" name="name" class="form-control" placeholder="Your Name"><br>
+       <input type="text" name="email"class="form-control" placeholder="Your Email"><br>
+       <input type="number" name="number" class="form-control" placeholder="Your Mobile Number"><br>
+       <textarea class="form-control border-0" rows="5" name="message" placeholder="Message"></textarea>
+      
+      
+       
+    
+       
+       <button type="submit" class="btn btn-info" style="margin-left: 40%;">Submit</button>
+       <br>
+       
+   </form>
+  </div></body> {% endcomment %}
+
+  <script>
+    const popupBtn = document.getElementById("popup-btn");
+    const popupMessage = document.getElementById("popup-message");
+    
+    popupBtn.addEventListener("click", () => {
+      popupMessage.style.display = "block";
+    });
+    
+    popupMessage.addEventListener("click", () => {
+      popupMessage.style.display = "none";
+    });
+    </script>
+
+
+
+
+
+{% endblock %}

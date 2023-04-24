@@ -1,0 +1,74 @@
+{% comment %} <nav class="navbar navbar-expand-lg navbar-light bg-light"> {% endcomment %}
+    {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+    {% comment %} <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=""><i class="fa fa-binoculars"></i>About</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-asterisk"></i>
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Digital Marketing</a>
+              <a class="dropdown-item" href="#">Web Development</a>
+              <a class="dropdown-item" href="#">Graphic Designing</a>
+            </div>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link " href=""><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=""><i class="fa fa-envelope"></i>Contact</a>
+          </li>
+      </ul>
+    </div>
+  </nav> {% endcomment %}
+  {% comment %} {% url 'user:contact' %} {% endcomment %}
+  {% comment %} {% url 'user:gallery' %} {% endcomment %}
+  {% comment %} {% url 'user:services' %} {% endcomment %}
+  {% comment %} {% url 'user:about' %} {% endcomment %}
+
+  <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+    <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand">
+          <a href=""><img style="height: 60px; width: auto;" alt="Logo" data-src="http://accoladesmedia.co.in/wp-content/uploads/l8.png" class="logo ls-is-cached lazyloaded" src="http://accoladesmedia.co.in/wp-content/uploads/l8.png"><noscript><img class="logo" style="height: 60px; width: auto;" src="http://accoladesmedia.co.in/wp-content/uploads/l8.png" alt="Logo"/></noscript></a>	
+            <h1 class="m-0 display-4 text-uppercase text-white"><i class="logo ls-is-cached lazyloaded"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="{% url 'user:home' %}" class="nav-item nav-link active">Home</a>
+                <a href="{% url 'user:About' %}" class="nav-item nav-link">About</a>
+                <div class="dropdown">
+                  <a
+                    class="nav-item nav-link dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Service
+              </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="{% url 'user:digitalmarketing' %}">Digital Marketing</a></li>
+                    <li><a class="dropdown-item" href="{% url 'user:webdevelopment' %}">Web development</a></li>
+                    <li><a class="dropdown-item" href="{% url 'user:graphic' %}">Graphic Designing</a></li>
+                  </ul>
+                </div>
+                <a href="{% url 'user:gallery' %}"class="nav-item nav-link">Gallery</a>
+                <a href="{% url 'user:contact' %}" class="nav-item nav-link">Contact</a>
+                <a href="{% url 'user:login' %}" class="nav-item nav-link">Client Enquiry</a>
+                
+            </div>
+        </div>
+    </nav>
+</div>

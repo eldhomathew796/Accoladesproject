@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+
+{% block content %}
+{% for i in gra %}
+
+<div class="container-fluid">
+    <h4>{{i.title}}</h4>
+    <p>{{i.description}}</p>
+    <img  src="{{ i.image.url }}"height="auto" class="img-fluid border border-light rounded-lg" style="max-width:100%";>
+    
+    
+
+</div>
+
+{% comment %} <div class="my_bottom_margin col-9 col-sm-12  col-md-4 col-lg-4">
+    <div class="card text-center" style="min-width:18rem;">
+        <img class="card-img-top " src="{{ i.image.url }}"width="25px" height="200px"  alt="{{ i.name }}"></a>
+
+
+    </div>
+</div>   {% endcomment %}
+{% endfor %}
+{% endblock %}
